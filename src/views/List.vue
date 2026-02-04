@@ -83,7 +83,7 @@
 
 <script setup lang="ts">
 import { ref, reactive, onMounted } from 'vue'
-import { useRouter, useRoute } from 'vue-router'
+import { useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus'
 import { View, ChatDotRound, Star } from '@element-plus/icons-vue'
 import { useUserStore } from '@/stores/user'
@@ -105,7 +105,6 @@ interface Article {
 }
 
 const router = useRouter()
-const route = useRoute()
 const userStore = useUserStore()
 const userLikes = ref<Set<string>>(new Set())
 
